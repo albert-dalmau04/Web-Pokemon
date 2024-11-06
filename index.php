@@ -8,4 +8,4 @@
 	header('Location: '.$uri.'/html/index.html');
 	exit;
 ?>
-Something is wrong with the XAMPP installation :-(
+
