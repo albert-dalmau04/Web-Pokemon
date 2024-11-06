@@ -16,7 +16,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('SonarQube Analysis') {
+        /*stage('SonarQube Analysis') {
             steps {
                 // Configurar el entorno de SonarQube
                 withSonarQubeEnv("${SONARQUBE_SERVER}") {
@@ -42,7 +42,8 @@ pipeline {
 
             }
         }
-        /*stage('Deploy to Web Server') {
+        */
+        stage('Deploy to Web Server') {
             steps {
                 // Usar credenciales SSH para conectarse al servidor web
                 sshagent(['webserver_ssh_credentials_id']) {
