@@ -5,7 +5,7 @@ $id_pokemon = "";
 
 $message = "";
 // Establecemos la conexión con la base de datos
-$link = mysqli_connect("localhost", "root", "", "Pokewebapp");
+$link = mysqli_connect("10.30.212.35","grupo8","grupo8","pokewebapp");
 
 // Revisamos que se haya realizado la conexión
 if ($link == false) {

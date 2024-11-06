@@ -6,12 +6,12 @@ if ($_SESSION["currentEmail"] !== "admin@stucom.com") {
   exit();
 }
 
-$link = mysqli_connect("localhost", "root", "", "Pokewebapp");
+$link = mysqli_connect("10.30.212.35","grupo8","grupo8","pokewebapp");
 
 if (isset($_POST['email'])) {
   $email = $_POST['email'];
 
-  $query = "SELECT nombre,correo,pokeballs FROM usuario WHERE correo = '$email'";
+  $query = "SELECT nombre,correo,pokeballs FROM Usuario WHERE correo = '$email'";
   $result = mysqli_query($link, $query);
 
   if (!$result) {

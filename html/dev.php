@@ -6,13 +6,13 @@ if ($_SESSION["currentEmail"] !== "admin@stucom.com") {
   exit();
 }
 
-$link = mysqli_connect("localhost", "root", "", "Pokewebapp");
+$link = mysqli_connect("10.30.212.35","grupo8","grupo8","pokewebapp");
 
 if (isset($_POST['userId']) && isset($_POST['pokeballs'])) {
   $userId = $_POST['userId'];
   $pokeballs = $_POST['pokeballs'];
 
-  $query = "UPDATE usuario SET pokeballs = pokeballs + $pokeballs WHERE id = $userId";
+  $query = "UPDATE Usuario SET pokeballs = pokeballs + $pokeballs WHERE id = $userId";
   $result = mysqli_query($link, $query);
 
   if (!$result) {
