@@ -34,16 +34,16 @@ if ($link == false) {
             // Verificación aleatoria del 33%
             $randomNumber = rand(1, 2);
 
-            $randomNumber = 1;
             if ($randomNumber == 1) {
 
-                
                 // Insertar el pokemon normalmente
                 $img_id = $_COOKIE["img_id"];
                 $especie = $_COOKIE["especie"];
                 $peso = $_COOKIE["peso"];
                 $altura = $_COOKIE["altura"];
                 $baxp = $_COOKIE["baxp"];
+
+                echo $peso;
 
                 // Creamos el query de insert para el pokemon
                 $sql = "INSERT INTO Pokemon (img_id,especie,nombre,peso,altura,baxp) VALUES ('$img_id','$especie','$especie','$peso','$altura','$baxp')";
