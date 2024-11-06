@@ -52,7 +52,7 @@ pipeline {
                     '''
                 }
             }
-        }*/
+        }
         stage('ZAP Analysis') {
             steps {
                 script {
