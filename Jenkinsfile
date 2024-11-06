@@ -47,7 +47,7 @@ pipeline {
                 // Usar credenciales SSH para conectarse al servidor web
                 sshagent(['webserver_ssh_credentials_id']) {
                     sh '''
-                        ssh grupo8@10.30.212.35 -P grupo8 'cd /var/www/Web-Pokemon/ && git pull origin main'
+                        ssh grupo8@10.30.212.35 -P grupo8 'cd /var/www/Web-Pokemon/ || git pull origin main'
                     '''
                 }
             }
