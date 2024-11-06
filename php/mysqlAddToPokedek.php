@@ -5,7 +5,7 @@ $id_pokemon = "";
 
 $message = "";
 // Establecemos la conexión con la base de datos
-$link = mysqli_connect("10.30.212.35","grupo8","grupo8","pokewebapp");
+$link = mysqli_connect("10.30.212.35", "grupo8", "grupo8", "pokewebapp");
 
 // Revisamos que se haya realizado la conexión
 if ($link == false) {
@@ -34,6 +34,8 @@ if ($link == false) {
             // Verificación aleatoria del 33%
             $randomNumber = rand(1, 2);
             if ($randomNumber == 1) {
+
+                
                 // Insertar el pokemon normalmente
                 $img_id = $_COOKIE["img_id"];
                 $especie = $_COOKIE["especie"];
@@ -59,6 +61,7 @@ if ($link == false) {
                     $message = "Error inserting Pokemon";
                 }
             } else {
+                
                 // Restar una pokeball de la tabla usuario y redirigir a failInsert.html
                 $sql = "UPDATE Usuario SET pokeballs = pokeballs - 1 WHERE id='$userID'";
                 if (mysqli_query($link, $sql)) {
