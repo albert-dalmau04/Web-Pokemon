@@ -42,7 +42,7 @@ pipeline {
 
             }
         }
-        stage('Deploy to Web Server') {
+        /*stage('Deploy to Web Server') {
             steps {
                 // Usar credenciales SSH para conectarse al servidor web
                 sshagent(['webserver_ssh_credentials_id']) {
@@ -51,7 +51,7 @@ pipeline {
                     '''
                 }
             }
-        }
+        }*/
         stage('ZAP Analysis') {
             steps {
                 script {
