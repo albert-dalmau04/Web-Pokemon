@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-        /*stage('Quality Gate') {
+        stage('Quality Gate') {
             steps {
                 // Esperar el resultado del Quality Gate
                 timeout(time: 1, unit: 'HOURS') {
@@ -41,7 +41,7 @@ pipeline {
                 }
 
             }
-        } */
+        } 
         
         stage('Deploy to Web Server') {
             steps {
