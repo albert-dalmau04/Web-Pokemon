@@ -32,7 +32,7 @@ if ($link == false) {
             }
 
             // Verificación aleatoria del 33%
-            //$randomNumber = rand(1, 2);
+            $randomNumber = rand(1, 2);
 
             $randomNumber = 1;
             if ($randomNumber == 1) {
@@ -59,11 +59,11 @@ if ($link == false) {
                     } else {
                         
                         $message = "Pokemon cannot be added to Pokedek";
-                        echo $message;
+                        
                     }
                 } else {
                     $message = "Error inserting Pokemon";
-                    echo $message;
+                    
                 }
             } else {
                 
