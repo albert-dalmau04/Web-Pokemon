@@ -16,7 +16,7 @@ pipeline {
                 checkout scm
             }
         }
-        /*stage('SonarQube Analysis') {
+        stage('SonarQube Analysis') {
             steps {
                 // Configurar el entorno de SonarQube
                 withSonarQubeEnv("${SONARQUBE_SERVER}") {
@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('Quality Gate') {
+        /*stage('Quality Gate') {
             steps {
                 // Esperar el resultado del Quality Gate
                 timeout(time: 1, unit: 'HOURS') {
@@ -41,8 +41,8 @@ pipeline {
                 }
 
             }
-        }
-        */
+        } */
+        
         stage('Deploy to Web Server') {
             steps {
                 // Usar credenciales SSH para conectarse al servidor web
