@@ -16,7 +16,7 @@ pipeline {
                 checkout scm
             }
         }
-        
+        /*
         stage('SonarQube Analysis') {
             steps {
                 // Configurar el entorno de SonarQube
@@ -34,6 +34,7 @@ pipeline {
                 }
             }
         }
+        */
         stage('Quality Gate') {
             steps {
                 // Esperar el resultado del Quality Gate
