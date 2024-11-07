@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy to Web Server') {
             steps {
                 // Usar credenciales SSH para conectarse al servidor web
-                sshagent(['webserver_ssh_credentials_id']) {
+                sshagent(credentials: ['webserver_ssh_credentials_id']) {
                     sh '''
                         ssh grupo8@10.30.212.35
                     '''
