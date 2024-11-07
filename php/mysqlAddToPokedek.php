@@ -43,7 +43,6 @@ if ($link == false) {
                 $altura = $_COOKIE["altura"];
                 $baxp = $_COOKIE["baxp"];
 
-                echo $peso;
 
                 // Creamos el query de insert para el pokemon
                 $sql = "INSERT INTO Pokemon (img_id,especie,nombre,peso,altura,baxp) VALUES ('$img_id','$especie','$especie','$peso','$altura','$baxp')";
