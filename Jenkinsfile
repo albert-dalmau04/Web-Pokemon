@@ -16,7 +16,7 @@ pipeline {
                 checkout scm
             }
         }
-        /*
+        
         stage('SonarQube Analysis') {
             steps {
                 // Configurar el entorno de SonarQube
@@ -43,7 +43,7 @@ pipeline {
 
             }
         } 
-        */
+        
         stage('Deploy to Web Server') {
             steps {
                 // Usar credenciales SSH para conectarse al servidor web
