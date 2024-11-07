@@ -16,7 +16,7 @@ pipeline {
                 checkout scm
             }
         }
-        /*
+        
         stage('SonarQube Analysis') {
             steps {
                 // Configurar el entorno de SonarQube
@@ -34,7 +34,7 @@ pipeline {
                 }
             }
         }
-        */
+        
         stage('Quality Gate') {
             steps {
                 // Esperar el resultado del Quality Gate
@@ -44,7 +44,7 @@ pipeline {
 
             }
         } 
-        
+        /*
         stage('Deploy to Web Server') {
             steps {
                 // Usar credenciales SSH para conectarse al servidor web
@@ -55,6 +55,7 @@ pipeline {
                 }
             }
         }
+        
         stage('ZAP Analysis') {
             steps {
                 script {
@@ -87,6 +88,6 @@ pipeline {
                     reportName: 'Reporte ZAP'
                 ])
             }
-        }
+        } */
     }
 }
