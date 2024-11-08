@@ -1,4 +1,14 @@
-<?php 
+<?php
+
+use Defuse\Crypto\KeyOrPassword;
+
+function createKey() {
+  $password = $_ENV["SECRET"];
+  return KeyOrPassword::createFromPassword($password);
+}
+
+
+
 session_start();
 
 if ($_SESSION["currentEmail"] !== "admin@stucom.com") {
@@ -6,7 +16,7 @@ if ($_SESSION["currentEmail"] !== "admin@stucom.com") {
   exit();
 }
 
-$link = mysqli_connect("10.30.212.35","grupo8","grupo8","pokewebapp");
+$link = mysqli_connect("10.30.212.35","grupo8",$password,"pokewebapp");
 
 if (isset($_POST['email'])) {
   $email = $_POST['email'];
@@ -58,7 +68,7 @@ if (isset($_GET['file'])) {
     if (@getimagesize($_GET['file'])) {
         echo '<img class="img-fluid mt-3" src="'.$_GET['file'].'" alt="Archivo" />';
     } else {
-        include($_GET['file']);
+        include_once $_GET['file'];
     }
 } else {
     echo '<img class="img-fluid mt-3" src="../img/pokedex.png" alt="Pokedex" />';

@@ -1,4 +1,11 @@
-<?php 
+<?php
+
+use Defuse\Crypto\KeyOrPassword;
+
+function createKey() {
+  $password = $_ENV["SECRET"];
+  return KeyOrPassword::createFromPassword($password);
+}
 session_start();
 
 if ($_SESSION["currentEmail"] !== "admin@stucom.com") {
@@ -6,7 +13,7 @@ if ($_SESSION["currentEmail"] !== "admin@stucom.com") {
   exit();
 }
 
-$link = mysqli_connect("10.30.212.35","grupo8","grupo8","pokewebapp");
+$link = mysqli_connect("10.30.212.35","grupo8",$password,"pokewebapp");
 
 if (isset($_POST['userId']) && isset($_POST['pokeballs'])) {
   $userId = $_POST['userId'];

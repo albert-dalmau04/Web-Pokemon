@@ -1,6 +1,8 @@
-<?php 
+<?php
 session_start(); // Iniciar la sesión
-require(__DIR__.'/../php/mysqlMain.php');
+
+require_once __DIR__.'/../php/mysqlMain.php';
+
 if (!isset($_SESSION["currentEmail"])) {
   header("Location: signin.php");
   exit();
@@ -48,7 +50,7 @@ if (!isset($_SESSION["currentEmail"])) {
           <ul>
             <li><a class="font-weight-bold" href="javascript:window.location.assign('profile.php')">Pokédex</a></li>
             <li><a class="font-weight-bold" href="javascript:window.location.assign('social.php')">Social</a></li>
-            <li><a onclick="logout()" class="font-weight-bold" href="#">Logout</a></li>
+            <li><a href="#section" onclick="logout()" class="font-weight-bold">Logout</a></li>
           </ul>
         </div>
       </div>
